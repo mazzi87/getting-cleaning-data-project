@@ -43,10 +43,7 @@ names(dataset_act)<-gsub("Gyro", "Gyroscope", names(dataset_act))
 names(dataset_act)<-gsub("Mag", "Magnitude", names(dataset_act))
 names(dataset_act)<-gsub("BodyBody", "Body", names(dataset_act))
 
-### extract final datasets
-dataset_new <- aggregate(dataset_act, by = list(dataset_act$Subject, dataset_act$`Activity Name`),
-                         FUN = mean)
-
+### extract final dataset and save it as "tidydata.txt"
 attach(dataset_act)
 data <- aggregate(. ~Subject + `Activity Name`, dataset_act, mean)
 data <- data[order(data$Subject, data$'Activity Name'),]
