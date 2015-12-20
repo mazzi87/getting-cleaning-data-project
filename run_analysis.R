@@ -1,18 +1,15 @@
-setwd("~/Coursera/getting and cleaning data/assignment/UCI HAR Dataset")
+### setting the working directory
+### setwd("~/Coursera/getting and cleaning data/assignment/UCI HAR Dataset")
 
 ### read in the data files
 subject_train <- read.table("C:/Users/Andrea/Documents/Coursera/getting and cleaning data/assignment/UCI HAR Dataset/train/subject_train.txt")
-
 X_train <- read.table("C:/Users/Andrea/Documents/Coursera/getting and cleaning data/assignment/UCI HAR Dataset/train/X_train.txt")
-
 Y_train <- read.table("C:/Users/Andrea/Documents/Coursera/getting and cleaning data/assignment/UCI HAR Dataset/train/y_train.txt")
-
 subject_test <- read.table("C:/Users/Andrea/Documents/Coursera/getting and cleaning data/assignment/UCI HAR Dataset/test/subject_test.txt")
-
 X_test <- read.table("C:/Users/Andrea/Documents/Coursera/getting and cleaning data/assignment/UCI HAR Dataset/test/X_test.txt")
-
 Y_test <- read.table("C:/Users/Andrea/Documents/Coursera/getting and cleaning data/assignment/UCI HAR Dataset/test/y_test.txt")
 
+### combining the train and test datasets separately
 data_train <- cbind(subject_train, Y_train, X_train)
 data_test <- cbind(subject_test, Y_test, X_test)
 
