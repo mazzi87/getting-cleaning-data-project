@@ -1,5 +1,5 @@
-### getting-cleaning-data-project
-### data specialization course project
+# getting-cleaning-data-project
+data specialization course project
 
 ## run_analysis.R
 Script does the following: 
